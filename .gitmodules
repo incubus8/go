@@ -4,3 +4,23 @@
 [submodule "vendor/github.com/rs/zerolog"]
 	path = vendor/github.com/rs/zerolog
 	url = https://github.com/rs/zerolog
+[submodule "vendor/github.com/gin-contrib/sse"]
+	path = vendor/github.com/gin-contrib/sse
+	url = https://github.com/gin-contrib/sse
+[submodule "vendor/github.com/golang/protobuf"]
+	path = vendor/github.com/golang/protobuf
+	url = https://github.com/golang/protobuf
+[submodule "vendor/github.com/mattn/go-isatty"]
+	path = vendor/github.com/mattn/go-isatty
+	url = https://github.com/mattn/go-isatty
+[submodule "vendor/github.com/ugorji/go"]
+	path = vendor/github.com/ugorji/go
+	url = https://github.com/ugorji/go
+[submodule "vendor/gopkg.in/yaml.v2"]
+	path = vendor/gopkg.in/yaml.v2
+	url = https://github.com/go-yaml/yaml.git
+    branch = v2
+[submodule "vendor/gopkg.in/go-playground/validator.v8"]
+	path = vendor/gopkg.in/go-playground/validator.v8
+	url = https://github.com/go-playground/validator.git
+	branch = v8
