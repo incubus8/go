@@ -1,0 +1,15 @@
+.swp
+config/prod.yaml
+build/
+Godeps/
+!Godeps/Godeps.json
+go-gin-boilerplate
+vendor
+.env
+ms-direct-debit
+.idea/
+main
+.vscode/
+debug
+*.exe
+.DS_Store
