@@ -24,3 +24,6 @@
 	path = vendor/gopkg.in/go-playground/validator.v8
 	url = https://github.com/go-playground/validator.git
 	branch = v8
+[submodule "vendor/github.com/pkg/errors"]
+	path = vendor/github.com/pkg/errors
+	url = https://github.com/pkg/errors
