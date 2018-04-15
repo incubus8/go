@@ -8,6 +8,7 @@ import (
 )
 
 func AbortWithAPIError(c *gin.Context, err *errors.APIError) {
+	c.Abort()
 	err.RecordedAt = time.Now().UTC().Format(time.RFC3339)
 
 	if err.StatusCode != 0 {
@@ -21,6 +22,4 @@ func AbortWithAPIError(c *gin.Context, err *errors.APIError) {
 	} else {
 		c.Error(err)
 	}
-
-	c.Abort()
 }
