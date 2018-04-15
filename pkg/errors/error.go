@@ -23,7 +23,7 @@ type APIError struct {
 	ErrorReason ErrorReason `json:"error"`
 	StatusCode  int         `json:"status_code"`
 	RecordedAt  string      `json:"recorded_at"`
-	Err         error
+	Err         error       `json:"-"`
 }
 
 func (e *APIError) Error() string {
