@@ -44,7 +44,7 @@ type Config struct {
 // This method configures the process to listen for termination signals (SIGINT
 // and SIGTERM) to trigger a graceful shutdown by way of the graceful package
 // (https://github.com/tylerb/graceful).
-func Init(conf Config) {
+func Run(conf Config) {
 	srv := setup(conf)
 
 	http2.ConfigureServer(srv.Server, nil)
