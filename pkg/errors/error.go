@@ -44,6 +44,17 @@ func (e *APIError) Error() string {
 	return s
 }
 
+type ValidationErrorReason struct {
+	Code    string   `json:"code"`
+	Message []string `json:"message"`
+}
+
+type ValidationError struct {
+	ValidationErrorReason ValidationErrorReason `json:"error"`
+	StatusCode            int                   `json:"status_code"`
+	RecordedAt            string                `json:"recorded_at"`
+}
+
 // StackTracer represents a type (usually an error) that can provide a stack
 // trace.
 type StackTracer interface {

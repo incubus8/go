@@ -1,10 +1,10 @@
 package gin
 
 import (
-	"github.com/incubus8/go/pkg/errors"
 	"github.com/gin-gonic/gin"
-	"time"
+	"github.com/incubus8/go/pkg/errors"
 	"net/http"
+	"time"
 )
 
 func AbortWithAPIError(c *gin.Context, err *errors.APIError) {
@@ -22,4 +22,24 @@ func AbortWithAPIError(c *gin.Context, err *errors.APIError) {
 	} else {
 		c.Error(err)
 	}
+}
+
+func AbortWithValidationError(c *gin.Context, errs []error) {
+	c.Abort()
+
+	strErrors := make([]string, len(errs))
+	for i, err := range errs {
+		strErrors[i] = err.Error()
+	}
+
+	ve := &errors.ValidationError{
+		ValidationErrorReason: errors.ValidationErrorReason{
+			Code:    "0001",
+			Message: strErrors,
+		},
+		StatusCode: http.StatusBadRequest,
+		RecordedAt: time.Now().UTC().Format(time.RFC3339),
+	}
+
+	c.JSON(http.StatusBadRequest, ve)
 }

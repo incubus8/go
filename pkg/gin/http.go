@@ -1,15 +1,14 @@
 package gin
 
 import (
-	"os"
 	"net/http"
+	"os"
 	"time"
 
 	"github.com/rs/zerolog/log"
 	"github.com/tylerb/graceful"
 	"golang.org/x/net/http2"
 )
-
 
 // DefaultListenAddr represents the default address and port on which a server
 // will listen, provided it is not overridden by setting the `ListenAddr` field
@@ -90,7 +89,7 @@ func setup(conf Config) *graceful.Server {
 		Timeout: timeout,
 
 		Server: &http.Server{
-			Addr: conf.ListenAddr,
+			Addr:    conf.ListenAddr,
 			Handler: conf.Handler,
 		},
 
