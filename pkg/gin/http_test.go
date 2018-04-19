@@ -1,4 +1,4 @@
-package ginutil
+package gin
 
 import (
 	"net/http"
