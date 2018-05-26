@@ -50,7 +50,6 @@ func Run(conf Config) {
 
 	if conf.OnStarting != nil {
 		conf.OnStarting()
-		log.Info().Msg("Your service is up and running at " + conf.ListenAddr)
 	}
 
 	var err error
